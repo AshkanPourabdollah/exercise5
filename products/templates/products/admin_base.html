@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        nav ul li {
+            float: right;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 50px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/userPanel">Home</a></li>
+                <li><a href="{% url 'userProducts' %}">Products</a></li>
+                <li><a href="{% url 'userContactUs' %}">Contact us</a></li>
+                <li><a href="{% url 'userLogout' %}">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    {%block main_user%}
+    {%endblock%}
+    
+    
+</body>
+
+</html>

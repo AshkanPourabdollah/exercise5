@@ -1,0 +1,38 @@
+{% extends 'products/base.html'%}
+
+{%block main%}
+<form method="post">
+<h3>
+    {% csrf_token %}
+
+    <table><tr>
+        <td colspan="2">Log in form</td>
+    </tr>
+    <tr>
+        <td>name : </td>
+        <td>
+            <input type="text" name="username">
+        </td>
+    </tr>
+    <tr>
+        <td>password : </td>
+        <td>
+            <input type="password" name="password">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Log in ">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <a href="/register" >Register new user</a>
+        </td>
+    </tr>
+
+    </table>
+</h3>
+</form>
+{%endblock%}
+    

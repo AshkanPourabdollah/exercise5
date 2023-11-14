@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <style>
+        /* استایل های قالب را اینجا قرار دهید */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        nav ul li {
+            float: right;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 50px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'users' %}">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    {%block main%}
+    {%endblock%}
+    
+    
+</body>
+
+</html>
